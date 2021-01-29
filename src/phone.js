@@ -41,6 +41,7 @@ class Phone extends Component{
               this.setState({otpSent:true,sendingOTP:false})
               // ...
             }).catch((error) => {
+              console.log(error)
                 this.setState({otpSent:false,sendingOTP:false})
               // Error; SMS not sent
               // ...
