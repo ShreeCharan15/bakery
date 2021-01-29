@@ -83,14 +83,7 @@ class Phone extends Component{
         this.setState({verifying:true})
         window.confirmationResult.confirm(this.state.otp).then((result) => {
             // User signed in successfully.
-            var credential = firebase.auth.PhoneAuthProvider.credential(window.confirmationResult.verificationId, this.state.otp)
-            firebase.auth().signInWithCredential(credential).then(()=>{
-                this.props.toggle()
-                
-            }).catch((err)=>{
-              console.log(err)
-              this.setState({verifying:false})
-            })
+            this.props.toggle()
             // ...
             
           }).catch((error) => {
