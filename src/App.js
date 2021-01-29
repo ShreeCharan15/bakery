@@ -92,7 +92,7 @@ const Header=()=>{
     <div>
       <Navbar fixed="top" dark style={{backgroundColor:"#1B212D"}} expand="md">
       <NavbarToggler onClick={toggleNavbar} className="mr-2" />
-        <NavbarBrand href="/home" className={"mr-auto"+(show?" d-block":" d-none")}>
+        <NavbarBrand href="/https://cakeclock.herokuapp.com/home" className={"mr-auto"+(show?" d-block":" d-none")}>
           <h1 style={{fontWeight: "400",color:" #4FD1C5",fontSize: "30px"}}>Cake O Clock</h1>
         </NavbarBrand>
         
