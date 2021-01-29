@@ -13,6 +13,7 @@ import { useEffect } from 'react';
 import  Cart  from './Cart';
 import { initCart } from './redux/ActionCreator';
 import { ItemPage } from './ItemPage';
+import Login from './Login';
 
 function App() {
   const dispatch=useDispatch();
@@ -109,6 +110,7 @@ const Header=()=>{
           </Nav>
         </Collapse>
         <Cart></Cart>
+        <Login></Login>
       </Navbar>
       
     </div>

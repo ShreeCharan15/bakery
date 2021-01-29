@@ -4,6 +4,7 @@ import React from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import shortid from "shortid"
 import { add, clearCart, remove } from "./redux/ActionCreator"
+import firebase from './firebase'
 
 function Cart() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -98,10 +99,11 @@ function Cart() {
               </DrawerBody>
   
               <DrawerFooter>
+                
                 <Button variant="outline" mr={3} onClick={onClose}>
                   Cancel
                 </Button>
-                <Button color="blue">Proceed to pay</Button>
+                <Button color="blue" disabled={!firebase.auth().currentUser}>{!firebase.auth().currentUser?"Login to proceed":"Proceed to pay"}</Button>
               </DrawerFooter>
             </DrawerContent>
           </DrawerOverlay>
