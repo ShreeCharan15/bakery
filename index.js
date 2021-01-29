@@ -8,7 +8,9 @@ const app=express();
 app.use(compression())
 
 app.use(express.static(__dirname+'/build'));
-
+app.get('/us', (req,res) =>{
+  res.sendFile('index.html', {root: path.join(__dirname, '/we')});
+});
 app.get('*', (req,res) =>{
     res.sendFile('index.html', {root: path.join(__dirname, '/build')});
 });
