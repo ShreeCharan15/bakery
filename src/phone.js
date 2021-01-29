@@ -87,13 +87,17 @@ class Phone extends Component{
             firebase.auth().signInWithCredential(credential).then(()=>{
                 this.props.toggle()
                 
-            }).catch((err)=>this.setState({verifying:false}))
+            }).catch((err)=>{
+              console.log(err)
+              this.setState({verifying:false})
+            })
             // ...
             
           }).catch((error) => {
             // User couldn't sign in (bad verification code?)
             // ...
-            this.setState({verifying:false})
+            console.log(error)
+              this.setState({verifying:false})
           });
     }
     
