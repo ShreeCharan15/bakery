@@ -162,3 +162,44 @@ export const othersFailed=(errmess)=>({
     type:"OTHERSERROR",
     err: errmess
 });
+
+
+export const addUsers=(items)=>({
+    type:"ADDUSERS",
+    items:items
+});
+export const usersLoading=()=>({
+    type:"USERSLOADING"
+});
+export const usersFailed=(errmess)=>({
+    type:"USERSERROR",
+    err: errmess
+});
+
+
+
+
+
+export const getOrders=(uid)=>(dispatch)=>{
+    dispatch(ordersLoading());
+    firebase.firestore().collection("Orders").where("uid","==",uid).orderBy("time","desc").get().then((orders)=>{
+        dispatch(addOrders(orders.docs.map((d)=>{
+            return {...d.data(),"id":d.id}
+        })))
+    }).catch((err)=>{
+        console.log(err)
+        dispatch(ordersFailed(err))
+    })
+}
+
+export const addOrders=(items)=>({
+    type:"ADDORDERS",
+    items:items
+});
+export const ordersLoading=()=>({
+    type:"ORDERSLOADING"
+});
+export const ordersFailed=(errmess)=>({
+    type:"ORDERSERROR",
+    err: errmess
+});

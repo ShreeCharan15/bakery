@@ -5,6 +5,8 @@ import { Home } from './home';
 import { Cookies } from './cookies';
 import { Cakes } from './cakes';
 import { Others } from './others';
+import { User } from './user';
+import { Orders } from './orders';
 
 export const ConfigureStore=()=>{
     const store= createStore(
@@ -13,7 +15,9 @@ export const ConfigureStore=()=>{
       home:Home,
       cookies:Cookies,
       cakes:Cakes,
-      others:Others
+      others:Others,
+      user:User,
+      orders:Orders,
      }),
      applyMiddleware(thunk)
     );

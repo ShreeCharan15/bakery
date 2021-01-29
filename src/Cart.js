@@ -5,8 +5,9 @@ import { useDispatch, useSelector } from "react-redux"
 import shortid from "shortid"
 import { add, clearCart, remove } from "./redux/ActionCreator"
 import firebase from './firebase'
+import { withRouter } from "react-router-dom"
 
-function Cart() {
+function Cart(props) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
     const dispatch=useDispatch();
@@ -103,7 +104,9 @@ function Cart() {
                 <Button variant="outline" mr={3} onClick={onClose}>
                   Cancel
                 </Button>
-                <Button color="blue" disabled={!firebase.auth().currentUser}>{!firebase.auth().currentUser?"Login to proceed":"Proceed to pay"}</Button>
+                <Button color="blue" 
+                onClick={()=>props.history.push("/pay")}
+                disabled={!firebase.auth().currentUser}>{!firebase.auth().currentUser?"Login to proceed":"Proceed to pay"}</Button>
               </DrawerFooter>
             </DrawerContent>
           </DrawerOverlay>
@@ -111,4 +114,4 @@ function Cart() {
       </>
     )
   }
-  export default Cart;
+  export default withRouter(Cart);

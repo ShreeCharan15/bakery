@@ -1,7 +1,7 @@
-import { Input, InputGroup, InputLeftAddon, PinInput, PinInputField, Skeleton, SkeletonText } from "@chakra-ui/react";
+import { Input, InputGroup, InputLeftAddon, PinInput, PinInputField, SkeletonText } from "@chakra-ui/react";
 import React from 'react'
-import { Component, useEffect, useState } from "react";
-import {  Button,Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Component } from "react";
+import {  Button} from 'reactstrap';
 import firebase from './firebase'
 class Phone extends Component{
     constructor(props)
@@ -73,7 +73,7 @@ class Phone extends Component{
      }
 
     handleChange = (event) => {
-        if(this.state.phone.length<10)
+        if(event.target.value.length<=10)
         this.setState({phone:event.target.value})
     }
 
@@ -82,7 +82,6 @@ class Phone extends Component{
         this.setState({verifying:true})
         window.confirmationResult.confirm(this.state.otp).then((result) => {
             // User signed in successfully.
-            const user = result.user;
             var credential = firebase.auth.PhoneAuthProvider.credential(window.confirmationResult.verificationId, this.state.otp)
             firebase.auth().signInWithCredential(credential).then(()=>{
                 this.props.toggle()

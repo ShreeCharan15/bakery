@@ -10,7 +10,6 @@ export const Cakes=(props)=>{
     const dispatch=useDispatch();
     const cakes=useSelector((state)=>state.cakes)
     useEffect(() => {
-        console.log(cakes)
         if(!cakes.loading && !cakes.items && !cakes.error)
         dispatch(getCakes())
       }, [cakes]);
@@ -30,7 +29,7 @@ const ite=(cakes,type)=>{
 </div>)}
     </div>
     else {
-        let a=[1,2,3,4,5,6,7,8]
+        let a=[1,2,3,4,5,6,7]
         return <div className="row justify-content-start" >
         {a.map((v)=>
         <div key={shortid.generate()} className="col-6 col-md-2" style={{margin:"10px 0px"}}>

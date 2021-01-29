@@ -2,7 +2,8 @@ import './App.css';
 import { Link, Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import { Home } from './Home';
 import { Cookies } from './Cookies';
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import firebase from './firebase'
 
 import { Cakes } from './Cakes';
 import { Others } from './Others';
@@ -11,12 +12,18 @@ import { useState } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, NavItem,Collapse } from 'reactstrap';
 import { useEffect } from 'react';
 import  Cart  from './Cart';
-import { initCart } from './redux/ActionCreator';
+import { addUsers, initCart } from './redux/ActionCreator';
 import { ItemPage } from './ItemPage';
 import Login from './Login';
+import Payment from './Payment';
+import  Orders  from './Orders';
 
 function App() {
+
   const dispatch=useDispatch();
+  firebase.auth().onAuthStateChanged(async(user)=>{
+    dispatch(addUsers(user))
+  })
   dispatch(initCart());
   const HomePage=()=><>
   <Header></Header>
@@ -40,6 +47,14 @@ const OthersPage=()=><>
 <Header></Header>
 <Others ></Others>
 </>
+const PaymentPage=()=><>
+<Header></Header>
+<Payment ></Payment>
+</>
+const OrdersPage=()=><>
+<Header></Header>
+<Orders ></Orders>
+</> 
   return (
     <div className="App" style={{backgroundColor:"#171923",color:"whitesmoke",minHeight:"100vh"}}>
       
@@ -48,9 +63,11 @@ const OthersPage=()=><>
           <Route exact path="/home" component={HomePage}></Route>
           <Route exact path="/cookies" component={CookiePage}></Route>
           <Route exact path="/cakes" component={CakePage}></Route>
+          <Route exact path="/orders" component={OrdersPage}></Route>
           <Route exact path="/others" component={OthersPage}></Route>
           <Route path="/cakes/:itemName" component={ItemPagePage("cakes")}></Route>
           <Route path="/cookies/:itemName" component={ItemPagePage("cookies")}></Route>
+          <Route exact path="/pay" component={PaymentPage}></Route>
           <Route path="/others/:itemName" component={ItemPagePage("others")}></Route>
           <Redirect to="/home"/>;
         </Switch>
@@ -62,9 +79,9 @@ const Header=()=>{
   let p=useLocation().pathname.split('/')[1];
   
   const [collapsed, setCollapsed] = useState(true);
+  const user=useSelector(state=>state.user);
 
   const toggleNavbar = () => setCollapsed(!collapsed);
-
   const [show, setShow] = useState(false);
   useEffect(() => {
     if(p!=="home")
@@ -108,9 +125,13 @@ const Header=()=>{
             <NavItem>
             <Link className="nav-link" to="/others">Others</Link>
             </NavItem>
+            {user.user?<NavItem>
+              <Link className="nav-link" to="/orders">Orders</Link>
+            </NavItem>:null}
           </Nav>
         </Collapse>
         <Cart></Cart>
+        
         <Login></Login>
       </Navbar>
       

@@ -1,14 +1,20 @@
-import { Input, InputGroup, InputLeftAddon } from "@chakra-ui/react";
 import React from 'react'
-import { Component, useEffect, useState } from "react";
+import { Component } from "react";
+import { connect } from "react-redux";
 import {  Button,Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import firebase from './firebase'
 import Phone from "./phone";
+const mapStateToProps=state=>{
+    return{
+      user : state.user,
+    }
+}
  class Login extends Component{
      toggle=()=>this.setState({isOpen:!this.state.isOpen})
-
+    
     constructor(props)
     {
+
         super(props);
         this.state={
             isOpen:false,
@@ -17,10 +23,11 @@ import Phone from "./phone";
     }
 
 
-
     
      lo=()=>{
-         if(firebase.auth().currentUser)
+        if(this.props.user.loading)
+        return <Button outline disabled>Logging in</Button>
+        else if(this.props.user.user)
         return  <Button outline onClick={()=>{
             firebase.auth().signOut().then(() => {
                 // Sign-out successful.
@@ -35,6 +42,7 @@ import Phone from "./phone";
 
     render()
     {
+
         return (
             <>
              {this.lo()}
@@ -55,4 +63,4 @@ import Phone from "./phone";
 
 
 }
-export default Login
+export default connect(mapStateToProps,null)(Login) 

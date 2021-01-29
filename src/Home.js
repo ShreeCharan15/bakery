@@ -3,11 +3,8 @@ import { CakeCard } from "./CakeCard"
 import { useDispatch, useSelector } from "react-redux"
 import { getHome } from "./redux/ActionCreator"
 import { useEffect } from "react"
-import { Button, Card, CardBody, CardFooter } from "reactstrap"
+import {  Card, CardBody, CardFooter } from "reactstrap"
 import { SkeletonText } from "@chakra-ui/react"
-import { useState } from "react";
-import {  Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import  Login  from "./Login"
 
 export const Home=(props)=>{
     const dispatch=useDispatch();

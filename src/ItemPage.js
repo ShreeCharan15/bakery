@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useLocation, useParams } from "react-router-dom"
 import shortid from "shortid"
 import Cardalt from "./Cardalt"
-import { add, getCakes, getCookies, remove } from "./redux/ActionCreator"
+import { add, getCakes, getCookies, getOthers, remove } from "./redux/ActionCreator"
 import { Card, CardBody, CardFooter} from "reactstrap"
 
 export const ItemPage=(props)=>{
@@ -20,7 +20,8 @@ export const ItemPage=(props)=>{
             dispatch(getCookies())
             else if(p==="cakes")
             dispatch(getCakes())
-            
+            else if(p==="others")
+            dispatch(getOthers())
         }
       }, [items]);
      
