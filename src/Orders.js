@@ -11,6 +11,7 @@ import {
   } from "@chakra-ui/react"
   import { Progress } from "@chakra-ui/react"
 import { withRouter } from "react-router-dom"
+import shortid from "shortid"
  const Orders=(props)=>{
     const dispatch=useDispatch();
     const orders=useSelector((state)=>state.orders)
@@ -40,8 +41,7 @@ import { withRouter } from "react-router-dom"
       .forEach((it)=>{
         tot=item.items[it+"Price"]*item.items[it]
       })
-        return <>
-  <AccordionItem>
+        return <AccordionItem key={shortid.generate()}>
     <AccordionButton>
      <div className="row justify-content-start" style={{width:"100%"}}>
          <div className="col-12 col-md" style={{textAlign:"start"}}>
@@ -62,7 +62,7 @@ import { withRouter } from "react-router-dom"
     </AccordionButton>
     <AccordionPanel pb={4} style={{color: "#9A9DA2"}}>
      {Object.keys(item.items).filter((v)=>!v.endsWith("Price")).map((it)=>
-      <div className="row">
+      <div key={shortid.generate()} className="row">
         <div className="col">{it}</div>
         <div className="col-auto">x {item.items[it]}</div>
         <div className="col-auto">{"\u20B9 "+item.items[it+"Price"]*item.items[it]}</div>
@@ -86,8 +86,6 @@ import { withRouter } from "react-router-dom"
      }
     </AccordionPanel>
   </AccordionItem>
-
-        </>
     }
     useEffect(() => {
         if(!user.loading && user.user)
@@ -104,7 +102,7 @@ import { withRouter } from "react-router-dom"
        Error
     </div>
       else if(user.user && orders.items)
-    return <div className="container" style={{paddingTop:"20px"}}>
+    return <div className="container" style={{paddingTop:"20px",paddingBottom:"20px"}}>
       <Accordion defaultIndex={[]} allowMultiple>
       {orders.items.map((item)=>it(item))}
       </Accordion>

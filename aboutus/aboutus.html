@@ -1,57 +1,26 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <title>About Cake O Clock </title>
-
     <meta name="description" content="Cake O Clock - About us">
     <meta name="keywords" content="Cake O Clock - About us">
-
-
-    <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
-    <!-- Main style  -->
-    <style>
-      
-
-body {
-  background-color: #171923;
+ <style>
+ body
+ { 
+ padding-top:30px;
+ background-color: #171923;
   font-family: "Prata", serif;
   color: #333333;
   font-size: 15px;
   overflow-x: hidden;
   line-height: 24px;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #333333;
-}
-
-a:hover,
-a:focus {
-  outline: none;
-  text-decoration: none;
-}
-
-h1, 
+ }
+ h1, 
 h2, 
 h3, 
 h4, 
@@ -66,829 +35,189 @@ h2 {
   line-height: 40px;
   margin: 0;
 }
-
-img {
-  border: none;
-  max-width: 100%;
+ .head-text
+ {
+ color:#4FD1C5;
+ font-size: 40px;
+  font-family: "Tangerine", cursive;
+  line-height: 30px;
+ }
+ .head-subtext
+ {
+  color:#9A9DA2;
+ font-size: 20px;
+ }
+.aboutus-list{
+	font-family: "Open Sans", sans-serif;
+	font-size: 18px;
 }
+.aboutus-list ul {
+	list-style-type: none;
+	font-size: 18px;
 
-
-
-
-
-
-
-
-
-/*==================
-	ABOUT US SECTION
-====================*/
-
-#mu-about-us {
-  display: inline;
-  float: left;
-  width: 100%;
-  padding: 100px 0;
 }
+.aboutus-list p {
+	font-size: 18px;
 
-.mu-about-us-area {
-  display: inline;
-  float: left;
-  width: 100%;
 }
-
-.mu-about-us-right {
-  display: inline;
-  color: #9A9DA2;
-  float: left;
-  margin-top: 20px;
-  padding-top: 30px;
-  padding-left: 15px;
-  width: 100%;
+.aboutus-list li {
+	margin: 10px 2px;	
 }
-
-.mu-about-us-right ul {
-  margin-bottom: 20px;
-  padding-left: 25px;
-}
-
-.mu-about-us-right ul li {
-  line-height: 24px;
-  margin-bottom: 10px;
-}
-
-.mu-about-us-right ul li:before {
+ .aboutus-list ul li:before {
   content: "\f0da";
   color: #4FD1C5;
   font-family: fontAwesome;
   margin-right: 10px;
 }
-
-.mu-about-us-left {
-  display: inline;
-  float: left;
- 
-  margin-top: 20px;
-  padding-top: 30px;
-  padding-right: 15px;
-  width: 100%;
-}
-
-.mu-title {
-  color: #4FD1C5;
-  display: inline;
-  float: left;
-  width: 100%;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.mu-title .mu-subtitle {
-  
-  font-size: 50px;
-  font-family: "Tangerine", cursive;
-  line-height: 30px;
-}
-
-.mu-title h2 {
-  color: #4FD1C5;
-  font-size: 35px;
-  margin-bottom: 5px;
-}
-
-
-
-
-
-/*==================
-  TESTIMONIAL SECTION
-====================*/
-
-#mu-client-testimonial {
-  background-size: cover;
-  background-attachment: fixed;
-  display: inline;
-  float: left;
-  width: 100%;
-}
-
-#mu-client-testimonial .mu-overlay {
-  background-color: #1B212D;
-  display: inline;
-  float: left;
-  padding: 70px 0 100px;
-  width: 100%;
-}
-
-#mu-client-testimonial .mu-title h2 {
-  color: #9A9DA2;
-}
-
-.mu-client-testimonial-area {
-  display: inline;
-  float: left;
-  width: 100%;
-}
-
-.mu-testimonial-content {
-  display: inline;
-  float: left;
-  width: 100%;
-}
-
-.mu-testimonial-slider {
-  display: inline;
-  float: left;
-  width: 100%;
-}
-
-.mu-testimonial-slider li {
-  display: inline;
-  float: left;
-  width: 100%;
-}
-
-.mu-testimonial-slider li .mu-testimonial-single {
-  display: inline;
-  float: left;
-  padding: 0 150px;
-  position: relative;
-  width: 100%;
-}
-
-.mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-info {
-  display: inline;
-  float: left;
-  width: 100%;
-  text-align: center;
-}
-
-.mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-info p {
-  color: #9A9DA2;
-  font-size: 20px;
-  letter-spacing: 0.5px;
-  line-height: 35px;
-  margin-top: 30px;
-  padding: 0;
-  position: relative;
-  z-index: 20;
-}
-
-.mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-info p:before {
-  content: '\f10e';
-  color: #171923;
-  font-family: fontAwesome;
-  font-size: 50px;
-  left: 1%;
-  position: absolute;
-  text-align: center;
-  top: 20%;
-  opacity: 0.6;
-  width: 100%;
-  z-index: -10;
-}
-
-.mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-bio {
-  color: #fff;
-  display: inline-block;
-  float: left;
-  margin-top: 5px;
-  margin-bottom: 25px;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  z-index: 30;
-}
-
-.mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-bio p {
-  display: inline-block;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 1px;
-  margin-bottom: 0;
-  min-width: 175px;
-  padding-top: 10px;
-}
-
-.mu-testimonial-slider .slick-dots {
-  text-align: center;
-}
-
-.mu-testimonial-slider .slick-dots li {
-  border-radius: 50%;
-  width: 20px;
-  display: inline-block;
-  float: none;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.mu-testimonial-slider .slick-dots li button {
-  display: none;
-}
-
-
-
-
-/*==================
- MAP SECTION
-====================*/
-
-#mu-map {
-  display: inline;
-  float: left;
-  height: 450px;
-  width: 100%;
-}
-
-#mu-map iframe {
+ .sub-text
+ {
+ color:#9A9DA2;
+ font-size: 20px;
+ line-height: 20px;
+ }
+ .map iframe {
   width: 100%;
   height: 100%;
 }
-
-/*==================
- FOOTER SECTION
-====================*/
-
-#mu-footer {
-  background-color: #171923;
-  display: inline;
-  float: left;
-  padding: 50px 0;
-  width: 100%;
+.map  {
+  height: 300px;
 }
 
-.mu-footer-area {
-  display: inline;
-  float: left;
-  width: 100%;
-  text-align: center;
+ .logo-text
+ {
+ margin:10px;
+ padding: 50px 10px;
+ color:white;
+ }
+ .test-text{
+	 margin-top: 20px;
+	 margin-bottom: 10px;
+	 color: bisque;
+ }
+.testimonials{
+	background-color: #1B212D;
+	padding: 50px 10px;
+	
 }
-
-.mu-footer-social {
-  display: inline;
-  float: left;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 10px;
+.footer{
+	background-color: #1B212D;
+	padding: 50px 10px;
 }
-
-.mu-footer-social a {
-  background-color: #1B212D;
-  border-radius: 50%;
-  color: #fff;
-  display: inline-block;
-  font-size: 20px;
-  height: 45px;
-  line-height: 47px;
-  margin: 5px;
-  text-align: center;
-  width: 45px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.mu-footer-copyright {
-  display: inline;
-  float: left;
-  width: 100%;
-}
-
-.mu-footer-copyright p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  color: #fff;
-}
-
-.mu-footer-copyright p a {
-  color: #fff;
-}
-
-
-/*==================
- RESPONSIVE DESIGN
-====================*/
-
-@media (max-width: 1199px) {
-
-  .mu-main-navbar .mu-main-nav li a {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .mu-top-slider .mu-top-slider-single .mu-top-slider-content {
-    position: absolute;
-    left: 5%;
-    top: 15%;
-    right: 5%;
-  }
-
-  .mu-top-slider .mu-top-slider-single .mu-top-slider-content .mu-slider-small-title {
-    font-size: 80px;
-  }
-
-  .mu-top-slider .mu-top-slider-single .mu-top-slider-content .mu-slider-title {
-    font-size: 55px;
-    line-height: 70px;
-  }
-
-  .mu-reservation-content {
-    padding: 0;
-  }
-
-  .mu-testimonial-slider li .mu-testimonial-single {
-    padding: 0 50px;
-  }
-
-  .mu-chef-nav .slick-list li .mu-single-chef .mu-single-chef-social {
-    padding: 23px 5px;
-  }
-
-  .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-info {
-  padding-top: 26%;
-  }
-
+ .test-name{
+	 color: #9A9DA2;
+ }
+  </style> 
   
-}
-
-
-@media (max-width: 991px) {
-
-
-  .mu-main-navbar .mu-main-nav li a {
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 14px;
-  }
-
-  .mu-top-slider-content .mu-reservation-btn {
-    display: none;
-  }
-
-  .mu-about-us-left,
-  .mu-reservation-form {
-    text-align: center;
-  }
-  
-  .mu-reservation-right {
-    margin-top: 60px;
-  }
-  
-  #mu-contact .mu-contact-area .mu-contact-content .mu-contact-right {
-    margin-top: 50px;
-    padding: 0;
-  }
-
-  #mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-body .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-info {
-    padding-top: 22%;
-  }
-
-  #mu-client-testimonial .mu-client-testimonial-area .mu-testimonial-content .mu-testimonial-slider li .mu-testimonial-single {
-    padding: 0 60px;
-  }
-
-  #mu-client-testimonial .mu-client-testimonial-area .mu-testimonial-content .mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-info p::before {
-    top: 40%;
-  }
-
-
-}
-
-
-@media (max-width: 767px) {
-
-  #mu-header {
-    padding: 0 15px;
-  }
-
-  .navbar-default .navbar-toggle {
-    border-radius: 0px;
-  }
-
-  .navbar-default .navbar-toggle:hover, 
-  .navbar-default .navbar-toggle:focus {
-    background-color: #fff;
-  }
-
-  .mu-main-navbar .mu-main-nav {
-    background-color: #fff;
-    text-align: center;
-  }
-
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, 
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    background-color: #fff;
-  }
-
-  #mu-counter .mu-counter-overlay .mu-counter-area .mu-counter-nav li {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-right: none;
-  }
-   
-}
-
-
-@media (max-width: 640px) {
-  
-  .navbar-default .navbar-toggle:hover, 
-  .navbar-default .navbar-toggle:focus {
-    background-color: #fff;
-  }
-
-  #mu-slider .mu-slider-area .mu-top-slider .mu-top-slider-single .mu-top-slider-content .mu-slider-title {
-    font-size: 50px;
-    line-height: 75px;
-  }
-
- .mu-top-slider .mu-top-slider-single .mu-top-slider-content {
-    top: 18%;
-  }
-
-  #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-restaurant-menu li a {
-    font-size: 16px;
-    margin: 0 5px;
-  }
-
-  #mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-body .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-info {
-    padding-top: 18%;
-  }
-
-  #mu-client-testimonial .mu-client-testimonial-area .mu-testimonial-content .mu-testimonial-slider li .mu-testimonial-single {
-    padding: 0;
-  }
-
-  .mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-info p {
-    font-size: 16px;
-    line-height: 30px;
-  }
-
-  #mu-chef .mu-chef-area .mu-chef-content .mu-chef-nav .slick-list li .mu-single-chef .mu-single-chef-social a {
-    margin: 0 3px;
-    padding: 3px 0;
-    width: 30px;
-  }
-
-  .mu-top-slider .slick-dots {
-    display: none !important;
-  } 
-
-  .mu-top-slider .mu-top-slider-single .mu-top-slider-content .mu-slider-small-title {
-    font-size: 45px;
-    line-height: 35px;
-  }
-
-  .mu-top-slider .mu-top-slider-single .mu-top-slider-content p {
-    font-size: 14px;
-    margin-bottom: 0;
-    margin-top: 0px;
-    padding: 0 5px;
-  }
-
-  #mu-slider .mu-slider-area .mu-top-slider .mu-top-slider-single .mu-top-slider-content .mu-slider-title {
-    font-size: 30px;
-    line-height: 50px;
-  }
-
-}
-
-
-@media (max-width: 480px) {
-
-  .mu-top-slider .mu-top-slider-single .mu-top-slider-content {
-   top: 20%;
-  }
-
-  .mu-top-slider .mu-top-slider-single .mu-top-slider-content p {
-    display: none;
-  }
- 
-  .mu-reservation-content p {
-    padding: 0;
-  }
-
-
-  .mu-title {
-    margin-bottom: 0;
-  }
-
-  #mu-client-testimonial .mu-client-testimonial-area .mu-testimonial-content .mu-testimonial-slider li .mu-testimonial-single {
-    padding: 0;
-  }
-
-  #mu-subscription .mu-subscription-area .mu-subscription-form input[type="text"] {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  #mu-subscription .mu-subscription-area {
-    padding: 0;
-    text-align: center;
-  }
-
-  #mu-subscription .mu-subscription-area .mu-subscription-form .mu-readmore-btn {
-    width: auto;
-  }
-
-  #mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-body .mu-single-gallery {
-    width: 100%;
-  }
-
-   #mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-body .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-info {
-    padding-top: 30%;
-  }
-
-  #mu-map {
-    height: 350px;
-  }
-
-  #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-restaurant-menu li {
-    margin-bottom: 10px;
-  }
-  
-  
-}
-
-@media (max-width: 360px) {
-
-  #mu-slider .mu-slider-area .mu-top-slider .mu-top-slider-single .mu-top-slider-content .mu-slider-title {
-    font-size: 22px;
-    line-height: 30px;
-  }
-
-  .mu-top-slider .mu-top-slider-single .mu-top-slider-content .mu-slider-small-title {
-    font-size: 30px;
-    line-height: 25px;
-  }
-
-  #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-restaurant-menu li {
-    margin-bottom: 12px;
-  }
-
-  #mu-about-us {
-    padding: 100px 0 50px;
-  }
-
-  #mu-restaurant-menu {
-    padding-bottom: 0px;
-  }
-
-  #mu-reservation .mu-reservation-area .mu-reservation-content {
-    padding: 0;
-  }
-
-  .mu-opening-hour h2 {
-    font-size: 42px;
-    padding-bottom: 10px;
-  }
-
-  .mu-title h2 {
-    font-size: 28px;
-  }
-
-  #mu-client-testimonial .mu-client-testimonial-area .mu-testimonial-content .mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-info p {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  
-  #mu-contact .mu-contact-area .mu-contact-content .mu-contact-right {
-    text-align: center;
-  }
-
-  #mu-contact .mu-contact-area .mu-contact-content .mu-contact-right .mu-contact-widget address {
-    text-align: left;
-  }
-
-  #mu-contact {
-    padding: 100px 0 50px;
-  }
-
-  #mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-body .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-info {
-    padding-top: 27%;
-  }
-
-  #mu-footer .mu-footer-area .mu-footer-social a {
-    font-size: 18px;
-  }
-
-  .mu-menu-item-nav li {
-    text-align: center;
-  }
-
-  #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-tab-content-area .mu-menu-item-nav li .media .media-left {
-    height: auto;
-    width: 100%;
-    margin-right: 0;
-    float: left;
-  }
-
-  #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-tab-content-area .mu-menu-item-nav li .media .media-left a{
-    display: inline-block;
-    margin-bottom: 10px;
-  }
-
-  #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-tab-content-area .mu-menu-item-nav li .media .media-left a img {
-    display: inline-block;
-  }
-
-  #mu-map {
-    height: 250px;
-  }
-
-  .mu-contact-form .mu-send-btn {
-    width: 100%;
-  }
-
-}
-
-
-@media (max-width: 320px) {
-
-  #mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-body .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-info {
-    padding-top: 25.5%;
-  }
-
-  
-}
-
-    </style>
-
-   
-    <!-- Google Fonts -->
-
-    <!-- Prata for body  -->
     <link href='https://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
-    <!-- Tangerine for small title -->
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>   
-    <!-- Open Sans for title -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    
-    
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+</head>
+<body>
 
-  </head>
-  <body>
+<div  class="container">
+	<div class="row">
+	<div class="col-12 text-center head-text">
+	<h1>
+	DISCOVER
+	</h1>
+	</div>
+	<div  class="col-12 text-center head-subtext ">
+	ABOUT US
+	</div>
+	 </div>
+	 <br/>
+	 <br/>
+	<div class="row">
+	<div class= "col-12 col-md-6">
 
-  <!--START SCROLL TOP BUTTON -->
-    <a class="scrollToTop" href="#">
-      <i class="fa fa-angle-up"></i>
-    </a>
-  <!-- END SCROLL TOP BUTTON -->
+	<img  class= "img-fluid" style=" border-radius: 20px;max-height: 400px;" src="https://www.gourmetfoodworld.com/images/product/large/6298_1_.jpg" alt="img">       
+	</div >
+	<div class= "col-12 col-md-6 aboutus-list sub-text">
+	<p>Freshly baked goodness you cant resist We are the top rated bakery in San Fransisco, you'll find the tatsiest baked goods served frssh daily.</p>                              
+		          <ul >
+		          
+		            <li>From warm and fluffy decandent and dreamy, all you need for a sweet day.</li>
+		            <li>We utilize profoundly gifted specialty dough punchers to guarantee each portion of bread is flawless without fail..</li>
+		            <li>Our pastry specialists work during that time with the goal that the portion of bread you purchase toward the beginning of the day is crisp out of the stove!</li>                    
+		            <li>Spreading bliss and commending each snapshot of life.</li>
+		            
+		         </ul>
+		          <p>We see the smiles that our treats bring to everyone who smiles that our treats bring to everyone who visits. Isnt it time that you stopped by</p>  
 
-  <!-- Start header section -->
+	</div >
+	 </div>
+</div>
+	 <br/>
+	 <br/>
+	 <div class="testimonials">
+		<div class="container">
+			<div class="row text-center ">
+				<div class="col-12  head-text">
+				<h1>TESTIMONIALS</h1>
+				</div>
+				<div class="col-12 head-subtext">
+				WHAT CUSTOMERS SAY
+				</div>
+				<div class="col-12 test-text">
+				BEST </div>
+				<div class="col-12 test-name">
+				-DAVID
+				
+				</div>
+				<div class="col-12 test-text">
+				Is there anything better?
+				</div>
+				<div class="col-12 test-name">
+				-MULLER
+				</div>
+				<div class="col-12 test-text">
+				LOVED IT
+				</div>
+				<div class="col-12 test-name">
+				-MELLEE
+				</div>
+			
+			</div>
+		 </div>
+	 </div>
 
-
-  <!-- End header section -->
-  
-  <!-- Start About us -->
-  <section id="mu-about-us">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="mu-about-us-area">
-
-            <div class="mu-title">
-              <span class="mu-subtitle">Discover</span>
-              <h2>ABOUT US</h2>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-               <div class="mu-about-us-left">     
-                <img style=" border-radius: 20px;" src="https://www.gourmetfoodworld.com/images/product/large/6298_1_.jpg" height="400px" alt="img">           
-                </div>
-              </div>
-              <div class="col-md-6">
-                 <div class="mu-about-us-right">
-                 <p>Freshly baked goodness you cant resist We are the top rated bakery in San Fransisco, you'll find the tatsiest baked goods served frssh daily.</p>                              
-                  <ul>
-                    <li>From warm and fluffy decandent and dreamy, all you need for a sweet day.</li>
-                    <li>We utilize profoundly gifted specialty dough punchers to guarantee each portion of bread is flawless without fail..</li>
-                    <li>Our pastry specialists work during that time with the goal that the portion of bread you purchase toward the beginning of the day is crisp out of the stove!</li>                    
-                    <li>Spreading bliss and commending each snapshot of life.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia.</li>
-                  </ul>
-                  <p>We see the smiles that our treats bring to everyone who smiles that our treats bring to everyone who visits. Isnt it time that you stopped by</p>  
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-
-  
-  <section id="mu-client-testimonial">
-    <div class="mu-overlay">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="mu-client-testimonial-area">
-
-              <div class="mu-title">
-                <span class="mu-subtitle">Testimonials</span>
-                <h2>What Customers Say</h2>
-              </div>
-
-              <!-- testimonial content -->
-              <div class="mu-testimonial-content">
-                <!-- testimonial slider -->
-                <ul class="mu-testimonial-slider">
-                  <li>
-                    <div class="mu-testimonial-single">                   
-                      <div class="mu-testimonial-info">
-                        <p>BEST</p>
-                      </div>
-                      <div class="mu-testimonial-bio">
-                        <p>- David</p>                      
-                      </div>
-                    </div>
-                  </li>
-                   <li>
-                    <div class="mu-testimonial-single">                   
-                      <div class="mu-testimonial-info">
-                        <p>is there anything better?</p>
-                      </div>
-                      <div class="mu-testimonial-bio">
-                        <p>- Muller</p>                      
-                      </div>
-                    </div>
-                  </li>
-                   <li>
-                    <div class="mu-testimonial-single">                   
-                      <div class="mu-testimonial-info">
-                        <p>Loved it</p>
-                      </div>
-                      <div class="mu-testimonial-bio">
-                        <p>- mellee</p>                      
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-
- 
-
- 
-
-  <section id="mu-map">
+	
+	 <section class="container-fluid map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9207.358598888495!2d-85.64847801496286!3d30.183918972289003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x2320479d70eb6202!2sDillard&#39;s!5e0!3m2!1sbn!2sbd!4v1462359735720" width="100%" height="100%" frameborder="0"allowfullscreen></iframe>
   </section>
+  <div class="footer">
+	<div class="container">
+		<div class="row justify-content-center logo-text">
+			<div class="col-12 text-center">Copyrights blah blah<br/><br/></div>
+			
+			<div class="col-auto">
+			<span class="fa fa-facebook"></span>
+			</div>
+			<div class="col-auto">
+			 <span class="fa fa-twitter"> </span>
+			</div>
+			<div class="col-auto">
+			 <span class="fa fa-google-plus"> </span>
+			</div>
+			<div class="col-auto">
+			 <span class="fa fa-linkedin"> </span>
+			</div>
+			<div class="col-auto">
+			 <span class="fa fa-youtube"> </span>
+			</div>
+			</div>
+	  </div>
+  </div>
+ 
 
-  <footer id="mu-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-        <div class="mu-footer-area">
-           <div class="mu-footer-social">
-            <a href="#"><span class="fa fa-facebook"></span></a>
-            <a href="#"><span class="fa fa-twitter"></span></a>
-            <a href="#"><span class="fa fa-google-plus"></span></a>
-            <a href="#"><span class="fa fa-linkedin"></span></a>
-            <a href="#"><span class="fa fa-youtube"></span></a>
-          </div>
-          <div class="mu-footer-copyright">
-            <p>&copy; Copyright <a rel="nofollow" href="http://markups.io">markups.io</a>. All right reserved.</p>
-          </div>         
-        </div>
-      </div>
-      </div>
-    </div>
-  </footer>
-  
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
+</body>
 
-  </body>
+
 </html>
+
