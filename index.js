@@ -14,6 +14,10 @@ app.get('/us', (req,res) =>{
 app.get('/aboutus', (req,res) =>{
   res.sendFile('aboutus.html', {root: path.join(__dirname, '/aboutus')});
 });
+
+app.get('/gallery', (req,res) =>{
+  res.sendFile('gallery.html', {root: path.join(__dirname, '/gallery')});
+});
 app.get('*', (req,res) =>{
     res.sendFile('index.html', {root: path.join(__dirname, '/build')});
 });
