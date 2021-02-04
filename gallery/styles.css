@@ -1,0 +1,22 @@
+box{
+    display: block;
+    float: left;
+    width: 3000px;
+    padding: 10px;
+    padding-left: 12px;
+}
+
+img{
+  height: 200px;
+  width: 300px;
+}
+
+img:hover{
+    transform: scale(4,2);
+    transition: .3s transfrom;
+}
+    
+    tr{
+            padding:100px;
+            column-width: 130px;
+    }
