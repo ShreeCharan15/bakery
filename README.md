@@ -1,5 +1,6 @@
 aboutus folder contains stuff for the aboutus page : done by shreya (https://cakeclock.herokuapp.com/us)
 intro folder contains stuff for the intro page : done by shreya (https://cakeclock.herokuapp.com/aboutus)
+gallery folder contains stuff for the galley page : done by Sanjana (https://cakeclock.herokuapp.com/galley)
 
 index.js is the node express server
 src and public is the react code
